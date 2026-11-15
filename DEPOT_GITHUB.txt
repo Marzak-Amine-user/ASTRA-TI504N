@@ -1,0 +1,21 @@
+ASTRA — Projet TI504N / TI504NB
+Équipe : Mohammed Amine Marzak et Ridha Ghenimi
+
+LIEN DU DÉPÔT GITHUB :
+Non créé à ce stade — ajouter ici l'URL réelle du dépôt partagé avant le rendu.
+
+DÉPÔT À CRÉER : par exemple ASTRA-TI504N
+
+Procédure rapide dans le terminal VS Code, à partir du dossier ASTRA :
+1. Créer un dépôt GitHub vide sur https://github.com/new (public ou privé selon le professeur).
+2. Ajouter Ridha comme collaborateur dans Settings > Collaborators.
+3. git init
+4. git add .
+5. git commit -m "Création du site ASTRA"
+6. git branch -M main
+7. git remote add origin https://github.com/VOTRE_COMPTE/ASTRA-TI504N.git
+8. git push -u origin main
+9. Ridha clone le dépôt et réalise ses propres améliorations/commits, puis push.
+10. Inscrire l'URL réelle dans ce fichier et recréer le ZIP.
+
+NE PAS fournir ce fichier sans l'URL réelle du dépôt dans le rendu final.
