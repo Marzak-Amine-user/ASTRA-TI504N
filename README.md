@@ -1,77 +1,42 @@
 # ASTRA — Explorateur du Système solaire
 
-Projet de programmation Web TI504N / TI504NB — EFREI, 2026–2027.
+Projet de programmation web TI504N / TI504NB — EFREI, 2026–2027.
 
-Équipe : **Mohammed Amine Marzak** et **Ridha Ghenimi**.
+**Équipe :** Mohammed Amine Marzak et Ridha Ghenimi.
 
-## Objectif
+**Dépôt GitHub :** https://github.com/Marzak-Amine-user/ASTRA-TI504N
 
-Créer un site pédagogique en HTML5 / CSS3 / JavaScript natifs, avec quatre pages reliées entre elles, des tableaux, un formulaire, des animations simples et un affichage adapté aux smartphones.
+## Présentation
 
-## Lancer le projet
-
-1. Extraire `MARZAK_GHENIMI.zip`.
-2. Ouvrir le dossier `ASTRA` dans VS Code.
-3. Double-cliquer sur `index.html` (ou l'ouvrir depuis VS Code).
-4. Naviguer grâce au menu et essayer les interactions. Aucune installation n'est requise.
-
-Le site fonctionne en local et **sans connexion Internet**, sauf les liens facultatifs vers les pages de référence de la NASA.
+ASTRA est un site pédagogique consacré à l'exploration du Système solaire. Il comporte quatre pages reliées entre elles, des contenus illustrés, des tableaux comparatifs et plusieurs interactions côté navigateur. Il est développé en HTML5, CSS3 et JavaScript natif, sans framework ni bibliothèque externe.
 
 ## Pages
 
-| Fichier | Description |
-|---|---|
-| `index.html` | Accueil avec illustration, statistiques, destinations et bouton de choix aléatoire |
-| `planetes.html` | Huit planètes, filtres par catégorie, recherche dynamique et tableau comparatif |
-| `missions.html` | Quatre missions, tableau et quiz à cinq questions avec correction |
-| `apropos.html` | Présentation du projet, du binôme et formulaire à validation locale |
+- `index.html` : page d'accueil, navigation et sélection aléatoire d'une destination.
+- `planetes.html` : présentation des huit planètes, recherche, filtres et tableau comparatif.
+- `missions.html` : présentation de missions spatiales, tableau et quiz interactif.
+- `apropos.html` : présentation du projet et formulaire avec validation locale.
 
-## Organisation
+## Organisation du projet
 
-```text
-ASTRA/
-├── index.html
-├── planetes.html
-├── missions.html
-├── apropos.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── media/
-│   ├── ciel.jpg
-│   ├── favicon.png
-│   └── ... huit illustrations de planètes .png
-├── maquette/
-│   └── ASTRA_Maquette.pdf
-├── README.md
-├── GUIDE_SOUTENANCE.md
-├── CONFORMITE.md
-└── DEPOT_GITHUB.txt
-```
+- `css/style.css` : styles communs et adaptation aux différentes tailles d'écran.
+- `js/script.js` : interactions, filtres, quiz et gestion du formulaire.
+- `media/` : illustrations et ressources graphiques locales.
+- `maquette/ASTRA_Maquette.pdf` : maquette du site.
+- `DEPOT_GITHUB.txt` : adresse du dépôt GitHub.
 
-## Techniques utilisées, en lien avec le cours
+## Fonctionnement
 
-**HTML5** : `head`, `body`, `header`, `nav`, `main`, `section`, `article`, `footer`, `a`, `img`, `table`, `tr`, `th`, `td`, `form`, `input`, `label`, `fieldset`, `select`, `textarea`.
+Le site peut être ouvert directement en lançant `index.html` dans un navigateur. Les pages et les images locales ne nécessitent pas de connexion Internet. Les liens documentaires externes nécessitent une connexion.
 
-**CSS3** : sélecteurs de classes et d'ID, propriétés de couleur et de police, bordures, marges et padding, Flexbox, `@media`, unités relatives, transitions et une animation visuelle légère.
+Le formulaire vérifie les informations saisies et affiche un message dans la page. Il ne transmet pas de données à un serveur et n'envoie pas d'e-mail.
 
-**JavaScript** : `const`, `let`, tableaux, boucles `for`, conditions `if`, fonctions, fonctions de rappel, `Math.random`, `document.getElementById`, `querySelectorAll`, `addEventListener`, propriétés `.value`, `.textContent` et `.style`.
+## Technologies
 
-Le site n'utilise aucun framework ni aucune bibliothèque JavaScript ou CSS. Les visuels sont des fichiers images autonomes ; leur fabrication ne fait pas partie du code exécuté sur le site.
+Le HTML structure les pages à l'aide de balises sémantiques, de tableaux et d'un formulaire. Le CSS assure la charte graphique, la mise en page et l'affichage responsive grâce notamment aux media queries. Le JavaScript assure les interactions au moyen d'événements, de fonctions et de manipulations du DOM.
 
-## Ressources et sources
+## Source documentaire
 
-Les illustrations sont des compositions originales créées spécialement pour ASTRA : ce ne sont pas des photographies d'astronomie et ne sont pas présentées comme telles. Les descriptions et ordres de grandeur scientifiques sont pédagogiques et arrondis. Source documentaire recommandée : https://science.nasa.gov/solar-system/
+NASA Science — Solar System : https://science.nasa.gov/solar-system/
 
-## Limites fonctionnelles
-
-- Le formulaire réalise la validation dans le navigateur, **sans serveur et sans envoi d'e-mail**.
-- Les filtres et le quiz fonctionnent côté navigateur et ne conservent aucune donnée.
-- Les liens externes documentaires exigent une connexion, mais toutes les pages du site restent utilisables hors ligne.
-
-## Avant le dépôt final
-
-**À effectuer effectivement par le binôme** : créer un dépôt GitHub partagé, inviter l'autre membre, réaliser de vrais commits personnels (ne pas simuler l'historique), tester sur deux tailles d'écran et faire valider les quatre fichiers HTML/CSS via les validateurs W3C. Ensuite reporter la vraie URL dans `DEPOT_GITHUB.txt`, ajuster la répartition des tâches sur la page À propos, puis reconstruire `MARZAK_GHENIMI.zip`.
-
-Dépôt : `https://github.com/` (créer le vôtre ; aucun dépôt n'a été créé automatiquement).
+Les images des planètes utilisées sur le site sont des illustrations, et non des photographies scientifiques.

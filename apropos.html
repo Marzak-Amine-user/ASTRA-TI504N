@@ -1,20 +1,302 @@
+
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Présentation du projet ASTRA et du binôme, formulaire de démonstration."><title>À propos | ASTRA</title><link rel="icon" href="media/favicon.png"><link rel="stylesheet" href="css/style.css"><script src="js/script.js" defer></script></head>
-<body><header class="site-header"><div class="container header-inner">
- <a class="brand" href="index.html" aria-label="ASTRA, retour à l'accueil"><span class="brand-mark" aria-hidden="true">✦</span> ASTRA<span style="color:#f7b980">.</span></a>
- <button class="mobile-nav-toggle" id="menu-button" aria-controls="main-menu" aria-expanded="false" type="button">☰ Menu</button>
- <nav class="site-nav" id="main-menu" aria-label="Navigation principale"><a href="index.html" class="" >Accueil</a>
-<a href="planetes.html" class="" >Planètes</a>
-<a href="missions.html" class="" >Missions</a>
-<a href="apropos.html" class="active" aria-current="page">À propos</a><a href="planetes.html" class="nav-cta">Explorer ↗</a></nav>
- </div></header><main><section class="page-banner"><div class="container"><div class="breadcrumb"><a href="index.html">Accueil</a> / À propos</div><p class="eyebrow">ASTRA / EXPLORATION</p><h1>Derrière ASTRA.</h1><p class="intro">Un projet universitaire, une passion pour le Web et une ambition simple : apprendre en créant une véritable expérience.</p></div></section>
-<section class="section-pad"><div class="container story-split"><div class="story-copy"><p class="eyebrow eyebrow-dark">LE PROJET</p><h2 class="section-title">Pourquoi ASTRA ?</h2><p>Nous avons choisi l'exploration spatiale comme fil conducteur. Le sujet permet de mélanger des contenus informatifs, des tableaux, un design visuel fort et des fonctionnalités interactives simples à comprendre.</p><p>Le site a été conçu dans le cadre du cours de programmation Web TI504N : HTML5 pour structurer, CSS3 pour présenter, JavaScript pour interagir. Aucun framework ni bibliothèque externe n'est utilisé.</p><p>Les images des planètes sont des illustrations originales créées pour l'identité graphique du projet. Elles ne doivent pas être confondues avec des photographies de la NASA.</p></div><div class="story-visual"><img src="media/mars.png" alt="Illustration originale de Mars" loading="lazy"><div class="floating-note">PROJET WEB / PROMOTION 2026–2027</div></div></div></section>
-<section class="section-pad" style="background:#eef2f7"><div class="container"><div class="section-head"><div><p class="eyebrow eyebrow-dark">L'ÉQUIPE</p><h2 class="section-title">Deux étudiants, un projet.</h2><p class="section-subtitle">Répartition prévue des domaines de travail, à ajuster pour refléter les contributions réellement réalisées.</p></div></div><div class="people">
-<article class="person-card"><div class="avatar">MM</div><h3>Mohammed Amine Marzak</h3><p>Conception &amp; interface — HTML, structure des pages, identité visuelle et mise en forme CSS responsive.</p></article>
-<article class="person-card"><div class="avatar">RG</div><h3>Ridha Ghenimi</h3><p>Interactivité &amp; vérifications — JavaScript, filtres, quiz, validation de formulaire et tests du site.</p></article>
-</div></div></section>
-<section class="section-pad" id="contact"><div class="container form-panel"><div class="form-intro"><p class="eyebrow eyebrow-dark">NOUS ÉCRIRE</p><h2 class="section-title">Un message pour l'équipage ?</h2><p>Ce formulaire montre les notions de champs HTML et de validation JavaScript étudiées en cours.</p><p><strong>Attention :</strong> c'est une démonstration locale. Aucun e-mail n'est envoyé et aucune donnée n'est stockée.</p></div><form class="contact-form" id="contact-form"><div class="field"><label for="contact-name">Votre nom *</label><input type="text" id="contact-name" name="nom" required minlength="2" placeholder="Votre nom"></div><div class="field"><label for="contact-email">Votre e-mail *</label><input type="email" id="contact-email" name="email" required placeholder="vous@exemple.fr"></div><div class="field"><label for="contact-subject">Sujet</label><select id="contact-subject" name="sujet"><option value="question">Question sur le projet</option><option value="idee">Suggestion</option><option value="autre">Autre</option></select></div><div class="field"><label for="contact-message">Votre message *</label><textarea id="contact-message" name="message" required minlength="10" placeholder="Votre message (10 caractères minimum)"></textarea></div><button class="btn btn-dark" type="submit">Valider le message ↗</button><p id="contact-success" class="form-success" aria-live="polite"></p></form></div></section></main><footer class="site-footer"><div class="container">
-  <div class="footer-main"><div class="footer-about"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span> ASTRA<span style="color:#f7b980">.</span></a><p>Un petit observatoire numérique pour découvrir le Système solaire, ses planètes et ses grandes missions d'exploration.</p></div>
-  <div class="footer-links"><div><h3>EXPLORER</h3><a href="index.html">Accueil</a><a href="planetes.html">Planètes</a><a href="missions.html">Missions</a></div>
-  <div><h4>LE PROJET</h4><a href="apropos.html">À propos & équipe</a><a href="apropos.html#contact">Contact</a><a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noopener noreferrer">Source documentaire : NASA ↗</a></div></div></div>
- <div class="footer-bottom"><p class="footer-small">© 2026 ASTRA · Projet pédagogique de programmation web · EFREI</p><p class="footer-small">Réalisé dans le cadre du module TI504N</p></div></div></footer></body></html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'équipe à l'origine d'ASTRA, un site dédié à l'exploration du Système solaire.">
+    <title>À propos | ASTRA</title>
+    <link rel="icon" href="media/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html" aria-label="ASTRA, retour à l'accueil">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                ASTRA<span style="color:#f7b980">.</span>
+            </a>
+
+            <button class="mobile-nav-toggle" id="menu-button"
+                    aria-controls="main-menu" aria-expanded="false"
+                    type="button">
+                ☰ Menu
+            </button>
+
+            <nav class="site-nav" id="main-menu" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="planetes.html">Planètes</a>
+                <a href="missions.html">Missions</a>
+                <a href="apropos.html" class="active" aria-current="page">À propos</a>
+                <a href="planetes.html" class="nav-cta">Explorer ↗</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-banner">
+            <div class="container">
+
+                <div class="breadcrumb">
+                    <a href="index.html">Accueil</a> / À propos
+                </div>
+
+                <p class="eyebrow">ASTRA / EXPLORATION</p>
+                <h1>Derrière ASTRA.</h1>
+
+                <p class="intro">
+                    Un projet de programmation Web consacré à la découverte
+                    du Système solaire, réalisé dans le cadre de notre
+                    formation d'ingénieur à l'EFREI.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="section-pad">
+            <div class="container story-split">
+
+                <div class="story-copy">
+
+                    <p class="eyebrow eyebrow-dark">LE PROJET</p>
+                    <h2 class="section-title">Pourquoi ASTRA ?</h2>
+
+                    <p>
+                        L'exploration spatiale est un domaine qui nous
+                        intéressait particulièrement pour ce projet.
+                        La diversité des planètes et des missions spatiales
+                        nous offrait la possibilité de construire un site
+                        à la fois informatif, interactif et agréable à parcourir.
+                    </p>
+
+                    <p>
+                        ASTRA permet de découvrir les huit planètes du
+                        Système solaire, de comparer leurs caractéristiques
+                        et de revenir sur plusieurs missions marquantes
+                        de l'exploration spatiale.
+                    </p>
+
+                    <p>
+                        Le site repose sur trois technologies :
+                        HTML5 pour organiser le contenu, CSS3 pour
+                        la mise en page et JavaScript pour les interactions.
+                        Il a été développé sans framework ni bibliothèque
+                        externe.
+                    </p>
+
+                    <p>
+                        Les visuels des planètes ont été réalisés pour
+                        l'identité graphique d'ASTRA. Il s'agit
+                        d'illustrations et non de photographies
+                        astronomiques.
+                    </p>
+
+                </div>
+
+                <div class="story-visual">
+                    <img src="media/mars.png"
+                         alt="Illustration de la planète Mars"
+                         loading="lazy">
+
+                    <div class="floating-note">
+                        PROJET WEB / PROMOTION 2026–2027
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-pad" style="background:#eef2f7">
+            <div class="container">
+
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow eyebrow-dark">L'ÉQUIPE</p>
+                        <h2 class="section-title">Deux étudiants, un projet.</h2>
+
+                        <p class="section-subtitle">
+                            ASTRA est le fruit d'un travail en binôme,
+                            associant conception de l'interface,
+                            programmation et vérification du site.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="people">
+
+                    <article class="person-card">
+                        <div class="avatar">MM</div>
+
+                        <h3>Mohammed Amine Marzak</h3>
+
+                        <p>
+                            Conception de l'interface et organisation
+                            des pages HTML, réalisation de l'identité
+                            visuelle et adaptation de la mise en page
+                            aux différents formats d'écran.
+                        </p>
+                    </article>
+
+                    <article class="person-card">
+                        <div class="avatar">RG</div>
+
+                        <h3>Ridha Ghenimi</h3>
+
+                        <p>
+                            Développement des interactions JavaScript,
+                            notamment les filtres des planètes,
+                            le quiz et le formulaire, ainsi que
+                            les tests des fonctionnalités du site.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-pad" id="contact">
+            <div class="container form-panel">
+
+                <div class="form-intro">
+
+                    <p class="eyebrow eyebrow-dark">NOUS ÉCRIRE</p>
+                    <h2 class="section-title">Un message pour l'équipage ?</h2>
+
+                    <p>
+                        Une question sur ASTRA ou une idée à partager ?
+                        Utilisez le formulaire ci-contre pour essayer
+                        notre interface de contact.
+                    </p>
+
+                    <p>
+                        Ce formulaire fonctionne localement :
+                        les informations saisies sont vérifiées,
+                        mais aucun message n'est envoyé ni enregistré.
+                    </p>
+
+                </div>
+
+                <form class="contact-form" id="contact-form">
+
+                    <div class="field">
+                        <label for="contact-name">Votre nom *</label>
+                        <input type="text"
+                               id="contact-name"
+                               name="nom"
+                               required
+                               minlength="2"
+                               placeholder="Votre nom">
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-email">Votre e-mail *</label>
+                        <input type="email"
+                               id="contact-email"
+                               name="email"
+                               required
+                               placeholder="vous@exemple.fr">
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-subject">Sujet</label>
+
+                        <select id="contact-subject" name="sujet">
+                            <option value="question">Question sur le projet</option>
+                            <option value="idee">Suggestion</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="contact-message">Votre message *</label>
+
+                        <textarea id="contact-message"
+                                  name="message"
+                                  required
+                                  minlength="10"
+                                  placeholder="Votre message (10 caractères minimum)"></textarea>
+                    </div>
+
+                    <button class="btn btn-dark" type="submit">
+                        Valider le message ↗
+                    </button>
+
+                    <p id="contact-success"
+                       class="form-success"
+                       aria-live="polite"></p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-about">
+
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark" aria-hidden="true">✦</span>
+                        ASTRA<span style="color:#f7b980">.</span>
+                    </a>
+
+                    <p>
+                        Un observatoire numérique pour découvrir
+                        le Système solaire, ses planètes et
+                        ses grandes missions d'exploration.
+                    </p>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <div>
+                        <h3>EXPLORER</h3>
+                        <a href="index.html">Accueil</a>
+                        <a href="planetes.html">Planètes</a>
+                        <a href="missions.html">Missions</a>
+                    </div>
+
+                    <div>
+                        <h3>LE PROJET</h3>
+                        <a href="apropos.html">À propos &amp; équipe</a>
+                        <a href="apropos.html#contact">Contact</a>
+                        <a href="https://science.nasa.gov/solar-system/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Source documentaire : NASA ↗
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+
+                <p class="footer-small">
+                    © 2026 ASTRA · Projet de programmation Web · EFREI
+                </p>
+
+                <p class="footer-small">
+                    Module TI504N · Année universitaire 2026–2027
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
