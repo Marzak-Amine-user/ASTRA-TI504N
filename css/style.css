@@ -130,7 +130,7 @@ tr:last-child td { border-bottom: 0; }
 .footer-about { max-width: 340px; }
 .footer-about p,.footer-small { color: #8999b0; font-size: 12px; }
 .footer-links { display: flex; gap: 50px; }
-.footer-links h4 { margin: 0 0 13px; font-size: 12px; }
+.footer-links h3 { margin: 0 0 13px; font-size: 12px; }
 .footer-links a { color: #9eacc1; display: block; font-size: 12px; margin-bottom: 9px; }
 .footer-links a:hover { color: #fff; }
 .footer-bottom { border-top: 1px solid #263247; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
