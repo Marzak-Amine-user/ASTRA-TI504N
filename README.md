@@ -41,7 +41,8 @@ Le site a été relu et testé dans le navigateur, y compris avec une fenêtre r
 
 - Navigation : le menu et les liens entre les quatre pages fonctionnent, y compris sur petit écran.
 - Recherche des planètes : la recherche ne tenait pas compte des accents (« venus » ne trouvait pas « Vénus »). Ce défaut a été corrigé dans `js/script.js`.
-- Formulaire de contact : la vérification de l'adresse e-mail se limitait à la présence d'un « @ ». Elle utilise désormais une expression régulière, qui refuse par exemple « a@ ».
+- Formulaire de contact : la vérification de l'adresse e-mail se limitait à la présence d'un « @ ». Elle utilise désormais une expression régulière qui impose un domaine avec un point : « a@b », accepté par le navigateur, est refusé par le script.
+- Menu mobile : la touche Échap referme le menu ouvert et rend le focus au bouton (amélioration d'accessibilité testée sur petit écran).
 
 ## Source documentaire
 
