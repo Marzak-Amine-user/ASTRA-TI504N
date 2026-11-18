@@ -8,6 +8,14 @@ if (menuButton && menu) {
     menu.classList.toggle("open");
     menuButton.setAttribute("aria-expanded", menu.classList.contains("open") ? "true" : "false");
   });
+  // Accessibilité : la touche Échap referme le menu et rend le focus au bouton
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && menu.classList.contains("open")) {
+      menu.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.focus();
+    }
+  });
 }
 
 // 2. Destination aléatoire sur la page d'accueil
