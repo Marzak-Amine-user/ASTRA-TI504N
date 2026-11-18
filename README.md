@@ -35,6 +35,14 @@ Le formulaire vérifie les informations saisies et affiche un message dans la pa
 
 Le HTML structure les pages à l'aide de balises sémantiques, de tableaux et d'un formulaire. Le CSS assure la charte graphique, la mise en page et l'affichage responsive grâce notamment aux media queries. Le JavaScript assure les interactions au moyen d'événements, de fonctions et de manipulations du DOM.
 
+## Tests et vérifications
+
+Le site a été relu et testé dans le navigateur, y compris avec une fenêtre réduite (affichage mobile).
+
+- Navigation : le menu et les liens entre les quatre pages fonctionnent, y compris sur petit écran.
+- Recherche des planètes : la recherche ne tenait pas compte des accents (« venus » ne trouvait pas « Vénus »). Ce défaut a été corrigé dans `js/script.js`.
+- Formulaire de contact : la vérification de l'adresse e-mail se limitait à la présence d'un « @ ». Elle utilise désormais une expression régulière, qui refuse par exemple « a@ ».
+
 ## Source documentaire
 
 NASA Science — Solar System : https://science.nasa.gov/solar-system/
