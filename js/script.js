@@ -1,4 +1,3 @@
-
 /* ASTRA : interactions en JavaScript natif, sans bibliothèque. */
 
 // 1. Menu sur petit écran
@@ -30,15 +29,20 @@ const emptyState = document.getElementById("empty-state");
 const countLabel = document.getElementById("planet-count");
 let activeFilter = "toutes";
 
+// Retire les accents et met en minuscules, pour que "venus" trouve "Vénus"
+function sansAccents(texte) {
+  return texte.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function updatePlanets() {
   if (!searchInput) return;
-  const searchText = searchInput.value.toLowerCase().trim();
+  const searchText = sansAccents(searchInput.value.trim());
   let visibleCount = 0;
   planetCards.forEach(function (card) {
     const category = card.getAttribute("data-category");
     const name = card.getAttribute("data-name");
     const matchesCategory = activeFilter === "toutes" || category === activeFilter;
-    const matchesText = name.toLowerCase().includes(searchText);
+    const matchesText = sansAccents(name).includes(searchText);
     if (matchesCategory && matchesText) {
       card.style.display = "block";
       visibleCount++;
@@ -94,7 +98,7 @@ if (contactForm && contactSuccess) {
     const name = document.getElementById("contact-name").value.trim();
     const email = document.getElementById("contact-email").value.trim();
     const message = document.getElementById("contact-message").value.trim();
-    if (name.length < 2 || email.indexOf("@") === -1 || message.length < 10) {
+    if (name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || message.length < 10) {
       contactSuccess.style.display = "block";
       contactSuccess.textContent = "Merci de renseigner un nom, un e-mail valide et un message d'au moins 10 caractères.";
     } else {
